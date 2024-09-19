@@ -1,0 +1,71 @@
+.movie-details-container {
+    padding: 20px 30px;
+}
+
+.movie-details {
+    display: flex;
+    gap: 50px;
+    border: 1px solid rgb(255, 208, 0);
+    border-radius: 15px;
+    padding: 30px;
+    background-color: black;
+}
+
+
+.movie-details p{
+    color: white;
+}
+
+.movie-img img {
+    width: 350px;
+    height: 480px;
+}
+
+.movie-info p span {
+    font-weight: bold;
+    color: rgb(255, 208, 0);
+}
+
+.movie-info p {
+    padding-bottom: 5px;
+}
+
+.movie-title {
+    color: rgb(255, 208, 0);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: rgb(255, 208, 0);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.edit-movie {
+    padding: 8px 25px;
+    background-color: rgb(255, 208, 0);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.del-movie {
+    padding: 8px 20px;
+    background-color: rgb(255, 208, 0);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
