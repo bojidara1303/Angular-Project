@@ -21,15 +21,6 @@
 }
 
 .nav-link {
-    background-color: rgb(255, 208, 0);
-    color: white;
-    cursor: pointer;
-    padding: 10px 15px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.nav-link:hover {
     background-color: black;
     color: rgb(255, 208, 0);
     cursor: pointer;
@@ -37,4 +28,14 @@
     font-weight: bold;
     text-decoration: none;
     border: 2px solid rgb(255, 208, 0);
+}
+
+.nav-link:hover {
+    background-color: rgb(255, 208, 0);
+    color: black;
+    cursor: pointer;
+    /* padding: 8px 13px; */
+    padding: 10px 15px;
+    font-weight: bold;
+    text-decoration: none;
 }
