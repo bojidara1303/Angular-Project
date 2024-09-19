@@ -1,10 +1,11 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     background-color: black;
     font-family: 'Poppins', sans-serif;
-}
-
-body {
-    /* display: block; */
-    margin: 0;
-    padding: 0;
 }

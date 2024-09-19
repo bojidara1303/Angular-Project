@@ -1,0 +1,92 @@
+.add-movie-container {
+    padding: 40px 0 50px;
+}
+
+.add-movie {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+    margin: 0px auto;
+    border: 1px solid rgb(255, 208, 0);
+    border-radius: 15px;
+    padding: 30px 0px;
+    background-color: black;
+}
+
+.add {
+    display: flex;
+    flex-direction: column;
+}
+
+.add h1 {
+    color: rgb(255, 208, 0);
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.add-movie label {
+    justify-content: center;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.add-movie input {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    padding: 5px 0px 5px 8px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 208, 0);
+    background-color: black;
+    color: white;
+}
+
+.add-movie input::placeholder {
+    font-size: 13px;
+    color: white;
+}
+
+.add-movie label,
+.add-movie input {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-movie textarea {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    padding: 8px 120px 90px 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 208, 0);
+    background-color: black;
+    color: white;
+}
+
+.add-movie textarea::placeholder {
+    color: white;
+}
+
+.add-movie-btn {
+    background-color: rgb(255, 208, 0);
+    color: black;
+    width: 150px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    margin: 0px auto;
+    font-size: 15px;
+}
+
+.cover-error,
+.title-error,
+.author-error,
+.genre-error,
+.year-error,
+.pages-error,
+.publisher-error,
+.summary-error {
+    color: red;
+    font-size: 13px;
+}
