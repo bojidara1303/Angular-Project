@@ -1,0 +1,73 @@
+.edit-movie-container{
+    padding: 40px 0 50px;
+}
+
+.edit-movie {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+    margin: 0px auto;
+    border: 1px solid rgb(255, 208, 0);
+    border-radius: 15px;
+    padding: 20px 0px;
+    background-color: black;
+}
+
+.edit {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-movie h1 {
+    color: rgb(255, 208, 0);
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.edit-movie label {
+    justify-content: center;
+}
+
+.edit-movie input {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    padding: 5px 0px 5px 8px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 208, 0);
+    background-color: black;
+    color: white;
+}
+
+.edit-movie label, .edit-movie input {
+    display: flex;
+    flex-direction: row;
+}
+
+.edit-movie textarea {
+    margin-bottom: 15px;
+    padding: 8px 120px 90px 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 208, 0);
+    background-color: black;
+    color: white;
+}
+
+.edit-movie-btn {
+    background-color: rgb(255, 208, 0);
+    color: black;
+    width: 150px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    margin: 10px 70px;
+    font-size: 15px;
+}
+
+.edit label{
+color: white;
+padding-bottom: 5px;
+}
+
