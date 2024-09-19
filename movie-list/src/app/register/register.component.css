@@ -1,0 +1,86 @@
+.register-page {
+    padding: 20px 0 50px 0;
+    margin-bottom: 50px;
+}
+
+.register {
+    display: flex;
+    width: 800px;
+    height: 390px;
+    border: 1px solid  rgb(255, 208, 0);
+    border-radius: 10px;
+    margin: 0px auto;
+    align-items: center;
+    background-color: black;
+}
+
+.register-left img {
+    width: 400px;
+    height: 390px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.register-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 30px;
+}
+
+.register-right h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    color:  rgb(255, 208, 0);
+    font-weight: bold;
+}
+
+.register-right input {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    padding: 5px 0px 5px 8px;
+    border-radius: 15px;
+    border: 1px solid  rgb(255, 208, 0);
+    background-color: black;
+    color: white;
+}
+
+.register-right input::placeholder {
+    font-size: 13px;
+    color: white;
+}
+
+.to-login {
+    font-size: 12px;
+    margin-top: 0;
+    padding-bottom: 0;
+    color: white;
+}
+
+.to-login-text {
+    color:  rgb(255, 208, 0);
+    font-size: 12px;
+}
+
+.register-btn {
+    background-color:  rgb(255, 208, 0);
+    color: black;
+    width: 100px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    margin: 0px auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.email-error,
+.password-error,
+.username-error,
+.confirm-password-error {
+    color: red;
+    font-size: 13px;
+}
