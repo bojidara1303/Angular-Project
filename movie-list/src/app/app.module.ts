@@ -12,6 +12,15 @@ import { MovieComponent } from './movies/movie/movie.component';
 import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
 import { AddMovieComponent } from './movies/add-movie/add-movie.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
+import { AddQuoteComponent } from './quotes/add-quote/add-quote.component';
+import { AllQuotesComponent } from './quotes/all-quotes/all-quotes.component';
+import { EditQuoteComponent } from './quotes/edit-quote/edit-quote.component';
+import { QuoteComponent } from './quotes/quote/quote.component';
+import { AllNewsComponent } from './news/all-news/all-news.component';
+import { NewsDetailsComponent } from './news/news-details/news-details.component';
+import { AllReviewsComponent } from './reviews/all-reviews/all-reviews.component';
+import { ReviewComponent } from './reviews/review/review.component';
+import { AddReviewComponent } from './reviews/add-review/add-review.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +33,16 @@ import { MovieDetailsComponent } from './movies/movie-details/movie-details.comp
     MovieComponent,
     AddMovieComponent,
     EditMovieComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    AddQuoteComponent,
+    AllQuotesComponent,
+    EditQuoteComponent,
+    QuoteComponent,
+    NewsDetailsComponent,
+    AllNewsComponent,
+    AllReviewsComponent,
+    ReviewComponent,
+    AddReviewComponent
   ],
   imports: [
     BrowserModule,
