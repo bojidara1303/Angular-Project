@@ -11,7 +11,7 @@
     background-color: black;
     color: white;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 15px 20px 25px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -43,9 +43,12 @@
 
 .review-content {
     margin: 0;
+    line-height: 22px;
 }
 
 .review-author {
     font-weight: 600;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
