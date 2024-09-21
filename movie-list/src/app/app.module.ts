@@ -3,10 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
 import { AllMoviesComponent } from './movies/all-movies/all-movies.component';
 import { MovieComponent } from './movies/movie/movie.component';
 import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
@@ -23,6 +19,12 @@ import { ReviewComponent } from './reviews/review/review.component';
 import { AddReviewComponent } from './reviews/add-review/add-review.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { RegisterComponent } from './user/register/register.component';
+import { LoginComponent } from './user/login/login.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { HeaderComponent } from './core/header/header.component';
+import { UserRoutingModule } from './user/user-routing.module';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -46,11 +48,13 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     ReviewComponent,
     AddReviewComponent,
     HomeComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    UserRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

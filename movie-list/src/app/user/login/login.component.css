@@ -1,5 +1,5 @@
 .login-page-container {
-    padding: 20px 0 49px 0;
+      padding: 20px 0 50px 0;
 }
 
 .login {
@@ -26,6 +26,7 @@
     color: rgb(255, 208, 0);
     font-size: 30px;
     font-weight: bold;
+    margin: 0;
 }
 
 .login-left input {

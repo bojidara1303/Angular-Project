@@ -1,0 +1,24 @@
+<header>
+    <nav class="site-nav">
+        <a href="/"><img src="/" alt="" /></a>
+        <ul>
+            <li><a routerLink="/" class="nav-link">Home</a></li>
+            <li><a routerLink="/movies" class="nav-link">Movies</a></li>
+            <li><a routerLink="/quotes" class="nav-link">Quotes</a></li>
+            <li><a routerLink="/news" class="nav-link">News</a></li>
+            <li><a routerLink="/about-us" class="nav-link">About Us</a></li>
+            <li><a routerLink="/contact-us" class="nav-link">Contact Us</a></li>
+
+            <div class="isAuthenticated">
+                <li><a routerLink="/add-movie" class="nav-link">Add Movie</a></li>
+                <li><a routerLink="/logout" class="nav-link"><span>Hello </span>| Logout</a></li>
+            </div>
+
+            <div class="isGuest">
+                <li><a routerLink="/login" class="nav-link">Login</a></li>
+                <li><a routerLink="/register" class="nav-link">Register</a></li>
+            </div>
+
+        </ul>
+    </nav>
+</header>
