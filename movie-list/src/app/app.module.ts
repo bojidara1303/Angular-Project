@@ -25,6 +25,11 @@ import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
 import { UserRoutingModule } from './user/user-routing.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RouterModule } from '@angular/router';
+import { MoviesRoutingModule } from './movies/movies-routing.module';
+import { QuotesRoutingModule } from './quotes/quotes-routing.module';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { NewsRoutingModule } from './news/news.routing.module';
 
 @NgModule({
   declarations: [
@@ -49,12 +54,17 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AddReviewComponent,
     HomeComponent,
     ErrorPageComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule,
+    UserRoutingModule,
+    MoviesRoutingModule,
+    QuotesRoutingModule,
+    NewsRoutingModule,
     AppRoutingModule,
-    UserRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

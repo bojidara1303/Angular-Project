@@ -5,6 +5,8 @@ import { MovieComponent } from './movie/movie.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { EditMovieComponent } from './edit-movie/edit-movie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { RouterModule } from '@angular/router';
+import { MoviesRoutingModule } from './movies-routing.module';
 
 
 
@@ -17,14 +19,16 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     MovieDetailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MoviesRoutingModule,
+    RouterModule
   ],
   exports:[
     AllMoviesComponent,
     MovieComponent,
     AddMovieComponent,
     EditMovieComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
   ]
 })
 export class MoviesModule { }

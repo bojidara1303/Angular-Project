@@ -4,6 +4,8 @@ import { AddQuoteComponent } from './add-quote/add-quote.component';
 import { AllQuotesComponent } from './all-quotes/all-quotes.component';
 import { EditQuoteComponent } from './edit-quote/edit-quote.component';
 import { QuoteComponent } from './quote/quote.component';
+import { RouterModule } from '@angular/router';
+import { QuotesRoutingModule } from './quotes-routing.module';
 
 
 
@@ -15,7 +17,9 @@ import { QuoteComponent } from './quote/quote.component';
     QuoteComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    QuotesRoutingModule,
+    RouterModule
   ],
   exports:[
     AddQuoteComponent,

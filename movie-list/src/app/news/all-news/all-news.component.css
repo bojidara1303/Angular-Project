@@ -1,23 +1,3 @@
-/* .news-container {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 0;
-}
-
-.news-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    gap: 20px;
-    padding: 0 50px;
-}
-
-.all-news-heading {
-    color: rgb(255, 208, 0);
-    text-align: center;
-    font-size: 30px;
-} */
-
 .news-container {
     display: flex;
     flex-wrap: wrap;
@@ -37,4 +17,3 @@
     font-size: 30px;
     font-weight: bold;
 }
-

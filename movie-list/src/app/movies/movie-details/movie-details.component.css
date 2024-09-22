@@ -12,7 +12,7 @@
 }
 
 
-.movie-details p{
+.movie-details p {
     color: white;
 }
 
@@ -50,22 +50,13 @@
     border: none;
     border-radius: 10px;
     font-size: 15px;
+    padding: 8px 0;
+    width: 130px;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .edit-movie {
-    padding: 8px 25px;
-    background-color: rgb(255, 208, 0);
+    text-decoration: none;
     color: black;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-.del-movie {
-    padding: 8px 20px;
-    background-color: rgb(255, 208, 0);
-    color: black;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
 }
