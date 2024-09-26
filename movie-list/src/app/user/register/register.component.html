@@ -1,13 +1,68 @@
 <section class="register-page">
-    <form class="register">
+    <form #registerForm="ngForm" class="register" (ngSubmit)="formSubmitHandler(registerForm)">
         <div class="register-left">
-            <img src="../../assets/register.jpg" alt="register"/>
+            <img src="../../assets/register.jpg" alt="register" />
         </div>
         <div class="register-right">
             <h1>Register</h1>
-            <input type="text" placeholder="Enter your email"/>
-            <input type="password" placeholder="Enter your password"/>
-            <input type="password" placeholder="Confirm your password"/>
+
+            <input 
+                type="text" 
+                name="username" 
+                placeholder="Enter your username" 
+                ngModel 
+                #inputUsername="ngModel" 
+                required
+            />
+
+            <ng-container *ngIf="inputUsername.touched">
+                <p class="username-error" *ngIf="inputUsername.errors?.['required']">Username is required!</p>
+            </ng-container>
+
+            <input 
+                type="text" 
+                name="email" 
+                placeholder="Enter your email" 
+                ngModel 
+                #inputEmail="ngModel" 
+                required
+            />
+
+            <ng-container *ngIf="inputEmail.touched">
+                <p class="email-error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+                <p class="email-error" *ngIf="inputEmail.errors?.['emailValidator']">Email is invalid!</p>
+            </ng-container>
+
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Enter your password" 
+                ngModel 
+                #inputPassword="ngModel" 
+                required
+                minlength="6"
+            />
+
+            <ng-container *ngIf="inputPassword.touched">
+                <p class="password-error" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
+                <p class="password-error" *ngIf="inputPassword.errors?.['minlength']">Password must be at least 6 characters!</p>
+            </ng-container>
+
+            <input 
+                type="password" 
+                name="confirm-password" 
+                placeholder="Confirm your password" 
+                ngModel 
+                #inputConfirmPassword="ngModel" 
+                required
+                minlength="6"
+            />
+
+            <ng-container *ngIf="inputConfirmPassword.touched">
+                <p class="confirm-password-error" *ngIf="inputConfirmPassword.errors?.['required']">Password is required!</p>
+                <p class="confirm-password-error" *ngIf="inputConfirmPassword.errors?.['minlength']">Password must be at least 6 characters!</p>
+            </ng-container>
+
             <p class="to-login">If you already have profile click <a routerLink="/login" class="to-login-text">here</a>
             </p>
             <button class="register-btn">Register</button>

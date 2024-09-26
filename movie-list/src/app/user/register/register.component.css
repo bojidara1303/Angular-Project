@@ -6,7 +6,7 @@
 .register {
     display: flex;
     width: 800px;
-    height: 390px;
+    height: auto;
     border: 1px solid  rgb(255, 208, 0);
     border-radius: 10px;
     margin: 0px auto;
@@ -16,7 +16,7 @@
 
 .register-left img {
     width: 400px;
-    height: 390px;
+    /* height: 392px; */
     object-fit: cover;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -26,9 +26,10 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    height: auto;
     text-align: center;
     justify-content: center;
-    padding: 15px 30px;
+    padding: 40px 30px;
 }
 
 .register-right h1 {
@@ -42,7 +43,7 @@
 .register-right input {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 15px;
-    padding: 5px 0px 5px 8px;
+    padding: 8px 0px 8px 8px;
     border-radius: 15px;
     border: 1px solid  rgb(255, 208, 0);
     background-color: black;
@@ -52,6 +53,7 @@
 .register-right input::placeholder {
     font-size: 13px;
     color: white;
+    padding-top: 5px;
 }
 
 .to-login {
@@ -84,4 +86,8 @@
 .confirm-password-error {
     color: red;
     font-size: 13px;
+    padding: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-bottom: 15px;
 }

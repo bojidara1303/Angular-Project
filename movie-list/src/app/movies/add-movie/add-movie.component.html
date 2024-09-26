@@ -4,28 +4,124 @@
             <h1>Add movie</h1>
 
             <label for="cover">Image:</label>
-            <input type="url" id="cover" name="cover" placeholder="Enter movie image URL" />
+            <input 
+                type="url" 
+                id="cover" 
+                name="cover" 
+                placeholder="Enter movie image URL" 
+                ngModel 
+                #inputCover="ngModel" 
+                required
+            />
 
+            <ng-container *ngIf="inputCover.touched">
+                <p class="cover-error" *ngIf="inputCover.errors?.['required']">Image is required!</p>
+            </ng-container>
+                
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" placeholder="Enter movie title" />
+            <input 
+                type="text" 
+                id="title" 
+                name="title" 
+                placeholder="Enter movie title" 
+                ngModel 
+                #inputTitle="ngModel" 
+                required
+            />
+
+            <ng-container *ngIf="inputTitle.touched">
+                <p class="title-error" *ngIf="inputTitle.errors?.['required']">Title is required!</p>
+            </ng-container>
 
             <label for="genre">Genre:</label>
-            <input type="text" name="genre" id="genre" placeholder="Enter movie genre" />
+            <input 
+                type="text" 
+                name="genre" 
+                id="genre" 
+                placeholder="Enter movie genre" 
+                ngModel 
+                #inputGenre="ngModel" 
+                required
+            />
+
+            <ng-container *ngIf="inputGenre.touched">
+                <p class="genre-error" *ngIf="inputGenre.errors?.['required']">Genre is required!</p>
+            </ng-container>
 
             <label for="year">Year:</label>
-            <input type="number" name="year" id="year" placeholder="Enter year of the movie" />
+            <input 
+                type="number" 
+                name="year" 
+                id="year" 
+                placeholder="Enter year of the movie" 
+                ngModel 
+                #inputYear="ngModel" 
+                required
+            />
+
+            <ng-container *ngIf="inputYear.touched">
+                <p class="year-error" *ngIf="inputYear.errors?.['required']">Year is required!</p>
+            </ng-container>
 
             <label for="cast">Cast:</label>
-            <input type="text" name="cast" id="cast" placeholder="Enter movie casts" />
+            <input 
+                type="text" 
+                name="cast" 
+                id="cast" 
+                placeholder="Enter movie casts" 
+                ngModel 
+                #inputCast="ngModel" 
+                required
+            />
+
+            <ng-container *ngIf="inputCast.touched">
+                <p class="cast-error" *ngIf="inputCast.errors?.['required']">Cast is required!</p>
+            </ng-container>
 
             <label for="director">Director:</label>
-            <input type="text" name="director" id="director" placeholder="Enter movie director" />
+            <input 
+                type="text" 
+                name="director" 
+                id="director" 
+                placeholder="Enter movie director" 
+                ngModel 
+                #inputDirector="ngModel" 
+                required
+            />
+
+            <ng-container *ngIf="inputDirector.touched">
+                <p class="director-error" *ngIf="inputDirector.errors?.['required']">Director is required!</p>
+            </ng-container>
 
             <label for="duration">Duration:</label>
-            <input type="number" name="duration" id="duration" placeholder="Enter duration in minutes" />
+            <input 
+                type="number" 
+                name="duration" 
+                id="duration" 
+                placeholder="Enter duration in minutes" 
+                ngModel 
+                #inputDuration="ngModel" 
+                required
+            />
+
+            <ng-container *ngIf="inputDuration.touched">
+                <p class="duration-error" *ngIf="inputDuration.errors?.['required']">Duration is required!</p>
+            </ng-container>
 
             <label for="summary">Summary:</label>
-            <textarea name="summary" id="summary" placeholder="Enter movie summary"></textarea>
+            <textarea 
+                name="summary" 
+                id="summary" 
+                placeholder="Enter movie summary"
+                ngModel 
+                #inputSummary="ngModel" 
+                required
+                >
+            </textarea>
+
+            <ng-container *ngIf="inputSummary.touched">
+                <p class="summary-error" *ngIf="inputSummary.errors?.['required']">Summary is required!</p>
+            </ng-container>
 
             <button class="add-movie-btn" type="submit">Add movie</button>
         </form>

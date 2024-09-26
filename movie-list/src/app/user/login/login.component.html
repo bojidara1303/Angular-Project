@@ -1,17 +1,53 @@
 <section class="login-page-container">
     <div class="login-page">
-        <form class="login">
+
+        <form #loginForm="ngForm" class="login" (ngSubmit)="formSubmitHandler(loginForm)">
             <div class="login-left">
                 <h1>Login</h1>
-                <input type="text" placeholder="Enter your email" />
-                <input type="password" placeholder="Enter your password" />
-                <p class="to-register">If you don't have profile click <a routerLink="/register" class="to-register-text">here</a>
+
+                <input 
+                    type="text" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Enter your email" 
+                    ngModel 
+                    #inputEmail="ngModel" 
+                    required
+                    
+                    [appEmail]="['bg','com']"
+                />
+
+                <ng-container *ngIf="inputEmail.touched">
+                    <p class="email-error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+                    <p class="email-error" *ngIf="inputEmail.errors?.['emailValidator']">Email is invalid!</p>
+                </ng-container>
+
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password" 
+                    ngModel 
+                    #inputPassword="ngModel" 
+                    required
+                    minlength="6"
+                />
+
+                <ng-container *ngIf="inputPassword.touched">
+                    <p class="password-error" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
+                    <p class="password-error" *ngIf="inputPassword.errors?.['minlength']">Password must be at least 6 characters!</p>
+                </ng-container>
+                
+                <p class="to-register">If you don't have profile click <a routerLink="/register"
+                        class="to-register-text">here</a>
                 </p>
+
                 <button class="login-btn">Login</button>
             </div>
             <div class="login-right">
                 <img src="../../assets/login.jpg" alt="login" />
             </div>
         </form>
+
     </div>
 </section>

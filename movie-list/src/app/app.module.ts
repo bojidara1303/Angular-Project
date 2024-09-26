@@ -30,6 +30,8 @@ import { MoviesRoutingModule } from './movies/movies-routing.module';
 import { QuotesRoutingModule } from './quotes/quotes-routing.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NewsRoutingModule } from './news/news.routing.module';
+import { FormsModule } from '@angular/forms';
+import { EmailDirective } from './shared/validators/email.directive';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import { NewsRoutingModule } from './news/news.routing.module';
     HomeComponent,
     ErrorPageComponent,
     ContactUsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    EmailDirective
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,7 @@ import { NewsRoutingModule } from './news/news.routing.module';
     QuotesRoutingModule,
     NewsRoutingModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
