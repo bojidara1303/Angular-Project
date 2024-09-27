@@ -9,7 +9,7 @@ import { QuoteComponent } from './quote/quote.component';
 const routes: Routes = [
     { path: 'add-quote', component: AddQuoteComponent },
     { path: 'quotes', component: AllQuotesComponent },
-    { path: 'edit-quote', component: EditQuoteComponent },
+    { path: 'quotes/quoteId/edit', component: EditQuoteComponent },
     { path: 'quotes/quote', component: QuoteComponent },
 ];
 

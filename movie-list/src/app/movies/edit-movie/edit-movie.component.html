@@ -1,6 +1,6 @@
 <section class="edit-movie-container">
     <div class="edit-movie">
-        <form class="edit">
+        <form #editMovieForm="ngForm" class="edit" (ngSubmit)="formSubmitHandler(editMovieForm)">
             <h1>Edit movie</h1>
 
             <label for="cover">Image:</label>
@@ -53,6 +53,8 @@
                 ngModel 
                 #inputYear="ngModel" 
                 required
+                min="1900"
+                max="2025"
             />
 
             <ng-container *ngIf="inputYear.touched">

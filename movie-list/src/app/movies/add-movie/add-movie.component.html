@@ -1,6 +1,6 @@
 <section class="add-movie-container">
     <div class="add-movie">
-        <form class="add">
+        <form #addMovieForm="ngForm" class="add" (ngSubmit)="formSubmitHandler(addMovieForm)">
             <h1>Add movie</h1>
 
             <label for="cover">Image:</label>
@@ -57,10 +57,14 @@
                 ngModel 
                 #inputYear="ngModel" 
                 required
+                min="1900"
+                max="2025"
             />
 
             <ng-container *ngIf="inputYear.touched">
                 <p class="year-error" *ngIf="inputYear.errors?.['required']">Year is required!</p>
+                <p class="year-error" *ngIf="inputYear.errors?.['min']">Year must be between 1900 and 2025!</p>
+                <p class="year-error" *ngIf="inputYear.errors?.['max']">Year must be between 1900 and 2025!</p>
             </ng-container>
 
             <label for="cast">Cast:</label>
@@ -102,10 +106,12 @@
                 ngModel 
                 #inputDuration="ngModel" 
                 required
+                min="0"
             />
 
             <ng-container *ngIf="inputDuration.touched">
                 <p class="duration-error" *ngIf="inputDuration.errors?.['required']">Duration is required!</p>
+                <p class="duration-error" *ngIf="inputDuration.errors?.['min']">Duration must be a positive number!</p>
             </ng-container>
 
             <label for="summary">Summary:</label>

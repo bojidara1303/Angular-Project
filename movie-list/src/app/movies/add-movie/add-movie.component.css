@@ -53,6 +53,7 @@
 .add-movie input {
     display: flex;
     flex-direction: row;
+    font-size: 14px;
 }
 
 .add-movie textarea {

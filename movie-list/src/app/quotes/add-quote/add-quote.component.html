@@ -1,7 +1,7 @@
 
-<div class="add-quote-container">
-    <section class="add-quote">
-        <form class="add">
+<section class="add-quote-container">
+    <div class="add-quote">
+        <form #addQuoteForm="ngForm" class="add" (ngSubmit)="formSubmitHandler(addQuoteForm)">
 
             <h1>Add Quote</h1>
 
@@ -11,20 +11,28 @@
                 id="imageUrl"
                 name="imageUrl"
                 placeholder="Enter image URL"
+                ngModel 
+                #inputImage="ngModel" 
+                required
             />
-            <!-- {urlError && (
-                <p class={styles["url-error"]}>{urlError}</p>
-            )} -->
+
+            <ng-container *ngIf="inputImage.touched">
+                <p class="image-error" *ngIf="inputImage.errors?.['required']">Image is required!</p>
+            </ng-container>
 
             <label for="quote">Quote:</label>
             <textarea
                 name="quote"
                 id="quote"
                 placeholder="Enter quote here"
+                ngModel 
+                #inputQuote="ngModel" 
+                required
             ></textarea>
-            <!-- {quoteError && (
-                <p class={styles["quote-error"]}>{quoteError}</p>
-            )} -->
+
+            <ng-container *ngIf="inputQuote.touched">
+                <p class="quote-error" *ngIf="inputQuote.errors?.['required']">Quote is required!</p>
+            </ng-container>
 
             <label for="author">Name:</label>
             <input
@@ -32,12 +40,16 @@
                 name="author"
                 id="author"
                 placeholder="Enter name here"
+                ngModel 
+                #inputAuthor="ngModel" 
+                required
             />
-            <!-- {authorError && (
-                <p class={styles["author-error"]}>{authorError}</p>
-            )} -->
+
+            <ng-container *ngIf="inputAuthor.touched">
+                <p class="author-error" *ngIf="inputAuthor.errors?.['required']">Name is required!</p>
+            </ng-container>
 
             <button class="add-quote-btn">Add quote</button>
         </form>
-    </section>
-</div>
+    </div>
+</section>
