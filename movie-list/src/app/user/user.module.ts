@@ -7,20 +7,18 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
 
-
 @NgModule({
-  declarations: [],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     UserRoutingModule,
-    LoginComponent,
-    RegisterComponent,
     RouterModule,
-    SharedModule
+    SharedModule,
   ],
-  exports:[
+  exports: [
     LoginComponent,
     RegisterComponent
-  ]
+  ],
+
 })
 export class UserModule { }
