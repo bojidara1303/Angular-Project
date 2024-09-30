@@ -1,20 +1,27 @@
 <header>
+    <!-- <a href="/"><img src="/" alt="" /></a> -->
     <nav class="site-nav">
-        <a href="/"><img src="/" alt="" /></a>
         <ul>
             <li><a routerLink="/" class="nav-link">Home</a></li>
             <li><a routerLink="movies" class="nav-link">Movies</a></li>
+            <div *ngIf="isLoggedIn" class="isAuthenticated">
+                <li><a routerLink="add-movie" class="nav-link">Add Movie</a></li>
+            </div>
             <li><a routerLink="quotes" class="nav-link">Quotes</a></li>
             <li><a routerLink="news" class="nav-link">News</a></li>
             <li><a routerLink="about" class="nav-link">About Us</a></li>
             <li><a routerLink="contacts" class="nav-link">Contact Us</a></li>
 
-            <div class="isAuthenticated">
-                <li><a routerLink="add-movie" class="nav-link">Add Movie</a></li>
-                <li><a routerLink="logout" class="nav-link"><span>Hello </span>| Logout</a></li>
+        </ul>
+
+        <ul>
+
+            <div *ngIf="isLoggedIn" class="isAuthenticated">
+                <li (click)="logout()"><a routerLink="logout" class="nav-link"><span>Hello, {{username}} </span>|
+                        Logout</a></li>
             </div>
 
-            <div class="isGuest">
+            <div *ngIf="!isLoggedIn" class="isGuest">
                 <li><a routerLink="login" class="nav-link">Login</a></li>
                 <li><a routerLink="register" class="nav-link">Register</a></li>
             </div>
