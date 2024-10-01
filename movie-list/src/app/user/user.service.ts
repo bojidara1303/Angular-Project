@@ -1,5 +1,5 @@
-import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable, OnDestroy } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
 import { UserForAuthenticaion } from '../types/user';
@@ -9,13 +9,17 @@ import { UserForAuthenticaion } from '../types/user';
   providedIn: 'root'
 })
 export class UserService implements OnDestroy {
- 
+
   private user$$ = new BehaviorSubject<UserForAuthenticaion | undefined>(undefined);
   private user$ = this.user$$.asObservable();
 
   user: UserForAuthenticaion | undefined;
 
   userSubscription: Subscription;
+
+  get isLogged(): boolean {
+    return !!this.user;
+  }
 
   constructor(private http: HttpClient) {
     this.userSubscription = this.user$.subscribe((user) => {
@@ -25,8 +29,8 @@ export class UserService implements OnDestroy {
 
   login(email: string, password: string) {
     return this.http
-      .post<UserForAuthenticaion>(`${environment.usersUrl}/login`, { email, password })
-      .pipe(tap((user) => this.user$$.next(user)));
+    .post<UserForAuthenticaion>(`${environment.usersUrl}/login`, { email, password })
+    .pipe(tap((user) => this.user$$.next(user)));
   }
 
   register(
