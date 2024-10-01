@@ -109,13 +109,13 @@
                 name="summary" 
                 id="summary" 
                 ngModel 
-                #inputSummary="ngModel" 
+                #textareaSummary="ngModel" 
                 required
                 >
             </textarea>
 
-            <ng-container *ngIf="inputSummary.touched">
-                <p class="summary-error" *ngIf="inputSummary.errors?.['required']">Summary is required!</p>
+            <ng-container *ngIf="textareaSummary.touched">
+                <p class="summary-error" *ngIf="textareaSummary.errors?.['required']">Summary is required!</p>
             </ng-container>
 
             <button class="edit-movie-btn" type="submit">Edit movie</button>
