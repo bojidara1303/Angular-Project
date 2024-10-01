@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { QuotesService } from '../quotes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-quote',
@@ -8,7 +10,23 @@ import { NgForm } from '@angular/forms';
 })
 export class EditQuoteComponent {
 
-  formSubmitHandler(form: NgForm) {
-    console.log(form);
+  form = this.fb.group({
+    imageUrl: ['', [Validators.required]],
+    quote: ['', [Validators.required]],
+    author: ['', [Validators.required]]
+  });
+
+  constructor(
+    private fb: FormBuilder,
+    private quoteService: QuotesService,
+    private router: Router
+  ) { }
+
+  editQuote(): void {
+    if (this.form.invalid) {
+      return
+    }
+
+    
   }
 }
