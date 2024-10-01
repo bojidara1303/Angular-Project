@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +10,31 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 
-  formSubmitHandler(form: NgForm) {
-console.log(form);
+  form = this.fb.group({
+    email: ['', [Validators.required]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
+  });
 
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService,
+    private router: Router
+  ) { }
+
+  login(): void {
+    if (this.form.invalid) {
+      return;
+    }
+
+    const {
+      email,
+      password
+    } = this.form.value;
+
+    this.userService
+      .login(email!, password!)
+      .subscribe(() => {
+        this.router.navigate(['/']);
+      });
   }
-
 }
