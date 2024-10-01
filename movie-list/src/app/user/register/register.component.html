@@ -1,5 +1,5 @@
 <section class="register-page">
-    <form #registerForm="ngForm" class="register" (ngSubmit)="formSubmitHandler(registerForm)">
+    <form class="register" [formGroup]="form" (ngSubmit)="register()">
         <div class="register-left">
             <img src="../../assets/register.jpg" alt="register" />
         </div>
@@ -10,57 +10,48 @@
                 type="text" 
                 name="username" 
                 placeholder="Enter your username" 
-                ngModel 
-                #inputUsername="ngModel" 
-                required
+                formControlName="username"
             />
 
-            <ng-container *ngIf="inputUsername.touched">
-                <p class="username-error" *ngIf="inputUsername.errors?.['required']">Username is required!</p>
+            <ng-container *ngIf="form.get('username')?.touched">
+                <p class="username-error" *ngIf="form.get('username')?.errors?.['required']">Username is required!</p>
             </ng-container>
 
             <input 
                 type="text" 
                 name="email" 
                 placeholder="Enter your email" 
-                ngModel 
-                #inputEmail="ngModel" 
-                required
+                formControlName="email"
             />
 
-            <ng-container *ngIf="inputEmail.touched">
-                <p class="email-error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
-                <p class="email-error" *ngIf="inputEmail.errors?.['emailValidator']">Email is invalid!</p>
+            <ng-container *ngIf="form.get('email')?.touched">
+                <p class="email-error" *ngIf="form.get('email')?.errors?.['required']">Email is required!</p>
+                <p class="email-error" *ngIf="form.get('email')?.errors?.['emailValidator']">Email is invalid!</p>
             </ng-container>
 
+        
             <input 
                 type="password" 
                 name="password" 
                 placeholder="Enter your password" 
-                ngModel 
-                #inputPassword="ngModel" 
-                required
-                minlength="6"
+                formControlName="password"
             />
 
-            <ng-container *ngIf="inputPassword.touched">
-                <p class="password-error" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
-                <p class="password-error" *ngIf="inputPassword.errors?.['minlength']">Password must be at least 6 characters!</p>
+            <ng-container *ngIf="form.get('password')?.touched">
+                <p class="password-error" *ngIf="form.get('password')?.errors?.['required']">Password is required!</p>
+                <p class="password-error" *ngIf="form.get('password')?.errors?.['minlength']">Password must be at least 6 characters!</p>
             </ng-container>
 
             <input 
                 type="password" 
-                name="confirm-password" 
+                name="confirmPassword" 
                 placeholder="Confirm your password" 
-                ngModel 
-                #inputConfirmPassword="ngModel" 
-                required
-                minlength="6"
+                formControlName="confirmPassword"
             />
 
-            <ng-container *ngIf="inputConfirmPassword.touched">
-                <p class="confirm-password-error" *ngIf="inputConfirmPassword.errors?.['required']">Password is required!</p>
-                <p class="confirm-password-error" *ngIf="inputConfirmPassword.errors?.['minlength']">Password must be at least 6 characters!</p>
+            <ng-container *ngIf="form.get('confirmPassword')?.touched">
+                <p class="confirm-password-error" *ngIf="form.get('confirmPassword')?.errors?.['required']">Password is required!</p>
+                <p class="confirm-password-error" *ngIf="form.get('confirmPassword')?.errors?.['minlength']">Password must be at least 6 characters!</p>
             </ng-container>
 
             <p class="to-login">If you already have profile click <a routerLink="/login" class="to-login-text">here</a>
