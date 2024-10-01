@@ -5,6 +5,8 @@ import { RegisterComponent } from './register/register.component';
 import { UserRoutingModule } from './user-routing.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { SharedModule } from '../shared/shared.module';
     UserRoutingModule,
     RouterModule,
     SharedModule,
+    HttpClient,
+    HttpClientModule
   ],
   exports: [
     LoginComponent,
