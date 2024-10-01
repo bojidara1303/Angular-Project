@@ -1,8 +1,19 @@
 <section class="movie-catalog">
     <h1 class="movie-catalog-heading">All Movies</h1>
     <div class="movie-container">
-       
+
         <!-- List of movies -->
-         
+        <article class="movie" *ngFor="let movie of movies">
+            <img src="{{movie.cover}}" />
+            <p class="movie-title">{{movie.title}}</p>
+            <p class="movie-genre">{{movie.genre}}</p>
+            <p class="movie-year">{{movie.year}}</p>
+            <button class="show-details">Show details</button>
+        </article>
+    </div>
+
+    <div class="wrapper">
+        <h1 class="no-movies" *ngIf="!movies">No movies added yet</h1>
+        <button class="add" *ngIf="isLoggedIn"><a routerLink="/add-movie" class="add-link"> Add new movie</a></button>
     </div>
 </section>
