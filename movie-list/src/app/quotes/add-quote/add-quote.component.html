@@ -1,7 +1,7 @@
 
 <section class="add-quote-container">
     <div class="add-quote">
-        <form #addQuoteForm="ngForm" class="add" (ngSubmit)="formSubmitHandler(addQuoteForm)">
+        <form [formGroup]="form" class="add" (ngSubmit)="createQuote()">
 
             <h1>Add Quote</h1>
 
@@ -11,13 +11,11 @@
                 id="imageUrl"
                 name="imageUrl"
                 placeholder="Enter image URL"
-                ngModel 
-                #inputImage="ngModel" 
-                required
+                formControlName="imageUrl"
             />
 
-            <ng-container *ngIf="inputImage.touched">
-                <p class="image-error" *ngIf="inputImage.errors?.['required']">Image is required!</p>
+            <ng-container *ngIf="form.get('imageUrl')?.touched">
+                <p class="image-error" *ngIf="form.get('imageUrl')?.errors?.['required']">Image is required!</p>
             </ng-container>
 
             <label for="quote">Quote:</label>
@@ -25,13 +23,11 @@
                 name="quote"
                 id="quote"
                 placeholder="Enter quote here"
-                ngModel 
-                #inputQuote="ngModel" 
-                required
+                formControlName="quote"
             ></textarea>
 
-            <ng-container *ngIf="inputQuote.touched">
-                <p class="quote-error" *ngIf="inputQuote.errors?.['required']">Quote is required!</p>
+            <ng-container *ngIf="form.get('quote')?.touched">
+                <p class="quote-error" *ngIf="form.get('quote')?.errors?.['required']">Quote is required!</p>
             </ng-container>
 
             <label for="author">Name:</label>
@@ -40,13 +36,11 @@
                 name="author"
                 id="author"
                 placeholder="Enter name here"
-                ngModel 
-                #inputAuthor="ngModel" 
-                required
+                formControlName="author"
             />
 
-            <ng-container *ngIf="inputAuthor.touched">
-                <p class="author-error" *ngIf="inputAuthor.errors?.['required']">Name is required!</p>
+            <ng-container *ngIf="form.get('author')?.touched">
+                <p class="author-error" *ngIf="form.get('author')?.errors?.['required']">Name is required!</p>
             </ng-container>
 
             <button class="add-quote-btn">Add quote</button>

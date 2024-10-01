@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { QuotesService } from '../quotes.service';
 
 @Component({
   selector: 'app-add-quote',
@@ -8,7 +10,25 @@ import { NgForm } from '@angular/forms';
 })
 export class AddQuoteComponent {
 
-  formSubmitHandler(form: NgForm) {
-    console.log(form);
+  form = this.fb.group({
+    imageUrl: ['', [Validators.required]],
+    quote: ['', [Validators.required]],
+    author: ['', [Validators.required]]
+  });
+
+  constructor(
+    private fb: FormBuilder,
+    private quoteService: QuotesService,
+    private router: Router
+  ) { }
+
+  createQuote(): void {
+    if (this.form.invalid) {
+      return
+    }
+
+    const { imageUrl, quote, author } = this.form.value;
+
+    this.quoteService.createQuote(imageUrl!, quote!, author!).subscribe(() => this.router.navigate(['/quotes']))
   }
 }
