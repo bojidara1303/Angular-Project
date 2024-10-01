@@ -1,5 +1,7 @@
+import { User } from "./user";
+
 export interface Movie {
-    _ownerId: string,
+    _ownerId: User,
     cover: string,
     title: string,
     genre: string,
