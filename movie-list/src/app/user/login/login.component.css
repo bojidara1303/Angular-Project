@@ -69,9 +69,8 @@
 
 .login-right img {
     width: 400px;
-    height: 395px;
+    /* height: 395px; */
     object-fit: cover;
-    padding-right: 15px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
