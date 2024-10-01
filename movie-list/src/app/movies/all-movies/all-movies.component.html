@@ -4,11 +4,11 @@
 
         <!-- List of movies -->
         <article class="movie" *ngFor="let movie of movies">
-            <img src="{{movie.cover}}" />
+            <a routerLink="/movies/:movieId/edit"><img src="{{movie.cover}}" /></a>
             <p class="movie-title">{{movie.title}}</p>
             <p class="movie-genre">{{movie.genre}}</p>
             <p class="movie-year">{{movie.year}}</p>
-            <button class="show-details">Show details</button>
+            <button class="show-details"> <a routerLink='{{movie._id}}/details' class="show-details-link">Show details</a></button>
         </article>
     </div>
 
