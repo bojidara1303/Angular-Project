@@ -36,6 +36,10 @@
     font-size: 30px;
 }
 
+.movie-summary{
+    line-height: 1.5em;
+}
+
 .btn-container {
     display: flex;
     justify-content: center;
