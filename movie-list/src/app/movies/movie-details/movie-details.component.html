@@ -1,23 +1,16 @@
 <section class="movie-details-container">
     <div class="movie-details">
-        <img src="../../../assets/The_Green_Mile_(movie_poster).jpg" alt="Green Mile" />
+        <a routerLink="/movies/:movieId/edit"><img src="{{movie.cover}}" alt="{{movie.title}}" /></a>
         <div class="movie-info">
-            <p class="movie-title"><span>Title:</span> The Green Mile</p>
-            <p class="movie-director"><span>Director:</span> Stephen King</p>
-            <p class="movie-cast"><span>Cast:</span> Gollancz</p>
-            <p class="movie-genre"><span>Genre:</span> Thriller</p>
-            <p class="movie-year"><span>Year:</span> 2015 </p>
-            <p class="movie-duration"><span>Duration:</span> 356</p>
-            <p class="movie-country"><span>Country:</span> Gollancz</p>
-            <p class="movie-summary"><span>Summary:</span> It tells the story of death row supervisor Paul Edgecombe's
-                encounter with John
-                Coffey, an unusual inmate who displays inexplicable healing and empathetic abilities. The serial novel
-                was
-                originally released in six volumes before being republished as a single-volume work. The book is an
-                example
-                of magical realism.</p>
+            <p class="movie-title"><span>Title:</span> {{movie.title}}</p>
+            <p class="movie-director"><span>Director:</span> {{movie.director}}</p>
+            <p class="movie-cast"><span>Cast:</span> {{movie.cast}}</p>
+            <p class="movie-genre"><span>Genre:</span> {{movie.genre}}</p>
+            <p class="movie-year"><span>Year:</span> {{movie.year}}</p>
+            <p class="movie-duration"><span>Duration:</span> {{movie.duration}} mins</p>
+            <p class="movie-summary"><span>Summary:</span> {{movie.summary}}</p>
             <div class="btn-container">
-                <button class="btn"><a routerLink="/movies/movieId/edit" class="edit-movie">Edit movie</a></button>
+                <button class="btn"><a routerLink="/movies/:movieId/edit" class="edit-movie">Edit movie</a></button>
                 <button class="del-movie btn">Delete movie</button>
             </div>
         </div>
