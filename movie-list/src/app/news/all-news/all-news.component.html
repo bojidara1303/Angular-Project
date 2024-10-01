@@ -3,7 +3,15 @@
     <div class="news-container">
 
         <!-- List of news -->
-
+        <article class="single-news" *ngFor="let news of allNews">
+            <h5 class="news-heading">{{news.heading}}</h5>
+            <button class="read-more">
+                <a [routerLink]="news._id" class="read-more-link"> Read more</a>
+            </button>
+        </article>
     </div>
+
+    <h1 class="no-news" *ngIf="!allNews">No news added yet</h1>
+ 
 
 </section>
