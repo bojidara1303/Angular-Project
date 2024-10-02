@@ -1415,21 +1415,47 @@
                 "_createdOn": 1721771103448,
                 "_id": "1fb9aeeb-286c-4249-8f29-7e87356b6970"
             },
+            {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "cover": "https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_.jpg",
+                "title": "The Lord of the Rings: The Return of the King",
+                "genre": "Fantasy, Adventure",
+                "year": "2003",
+                "cast": "Elijah Wood, Viggo Mortensen, Ian McKellen",
+                "director": "Peter Jackson",
+                "duration": "201",
+                "summary": "The final confrontation between the forces of good and evil fighting for control of the future of Middle-earth. Frodo and Sam reach Mordor in their quest to destroy the One Ring, while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith.",
+                "_createdOn": 1721771103449,
+                "_id": "3d71e9e9-bb94-4a0d-a56a-3d0b3c17843d"
+            },
+            {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSjSWOCaw5dnDL2GT1zFd9RMCgUGw5Q2Cfg&s",
+                "title": "The Matrix",
+                "genre": "Action Epic, AI",
+                "year": "1999",
+                "cast": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+                "director": "Lilly Wachowski",
+                "duration": "136",
+                "summary": "Thomas A. Anderson is a man living two lives. By day he is an average computer programmer and by night a hacker known as Neo. Neo has always questioned his reality, but the truth is far beyond his imagination. Neo finds himself targeted by the police when he is contacted by Morpheus, a legendary computer hacker branded a terrorist by the government. As a rebel against the machines, Neo must confront the agents: super-powerful computer programs devoted to stopping Neo and the entire human rebellion.",
+                "_createdOn": 1721771122449,
+                "_id": "747a6257-e1b4-45d3-a2cd-c0e63582c1ef"
+            },
         ],
         quotes: [
             {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUTLOonH9YSWLn7zu0kxLFIkAhcVPgk2cdSw&s",
-                "quote": "“May the Force be with you.”",
-                "movie": "― Star Wars",
+                "imageUrl": "https://m.media-amazon.com/images/I/51axx0Gqx5L._AC_SY200_QL15_.jpg",
+                "quote": "“If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you.”",
+                "movie": "― Taken (2008)",
                 "_createdOn": 1722325367580,
                 "_id": "66be539b-7d2f-428a-b3f7-83fb8eb69608"
             },
             {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "imageUrl": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
-                "quote": "“I'm the king of the world!”",
-                "movie": "― Titanic",
+                "imageUrl": "https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/title-key-art/thepursuitofhappyness_onesheet_1400x2100.png?itok=BSpvsOsJ",
+                "quote": "“Don't ever let someone tell you, you can't do something. Not even me. You got a dream, you got to protect it. People can't do something themselves, they want to tell you you can't do it. You want something, go get it. Period.”",
+                "movie": "― Pursuit of Happyness (2006)",
                 "_createdOn": 1722325365580,
                 "_id": "bfa7b844-a25d-47a2-b919-8bb7959d05bf"
             },
@@ -1443,28 +1469,41 @@
             },
             {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "imageUrl": "https://m.media-amazon.com/images/M/MV5BYTViNzMxZjEtZGEwNy00MDNiLWIzNGQtZDY2MjQ1OWViZjFmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-                "quote": "“I'll be back.”",
-                "movie": "― The Terminator",
-                "_createdOn": 1722344465580,
-                "_id": "460430da-8233-4182-a3d4-61f0f6fdcc95"
+                "imageUrl": "https://miro.medium.com/v2/resize:fit:548/1*Y8vXN1mJeEHyXWJtFICjiQ.jpeg",
+                "quote": "“You got a dream, you gotta protect it. People can't do something themselves, they wanna tell you that you can't do it.”",
+                "movie": "― Pursuit of Happyness (2006)",
+                "_createdOn": 1722344445580,
+                "_id": "e2c8a736-22c4-4fd8-b0d5-6f5e9eb2af2a"
+            },
+            {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUTLOonH9YSWLn7zu0kxLFIkAhcVPgk2cdSw&s",
+                "quote": "“May the Force be with you.”",
+                "movie": "― Star Wars",
+                "_createdOn": 1723325367580,
+                "_id": "7326463f-437a-46c6-a644-585355eaba23"
             },
         ],
         news: [
             {
-                "heading": "Ridley Scott Planning a 'Gladiator 3': “There's Already An Idea”",
-                "content": "It took Ridley Scott twenty years to return to the Roman Colosseum with Gladiator II, but he is already plotting his third trip to Ancient Rome. I'd rather get on into Gladiator III,” Scott told The Hollywood Reporter Thursday when asked about a different potential next project for the 86-year-old filmmaker. “There's already an idea. He added that he's taking inspiration from The Godfather Part II for the next story. The Gladiator 3 news first trickled out Friday after the French publication Premiere published similar comments from Scott. Gladiator II opens Nov. 22 and arrives 20 years after Scott’s Gladiator, which won five Oscars, including best picture and best actor for Russell Crowe. Paul Mescal, Pedro Pascal, Denzel Washington, Joseph Quinn and Connie Nielsen star in the new film. Scott remains one of the most prolific directors working in Hollywood, a filmmaker who at times release two films in a single year.",
+                "heading": "'Despicable Me 4' Gets Peacock Streaming Date in Time for Halloween",
+                "content": "It's going to be a very despicable Halloween this year. Get your yellow face paint and overalls ready, because Universal and Illumination's “Despicable Me 4” is streaming on Peacock on October 31. \nAfter releasing in theaters over the summer on July 3, the four-quel made $360.8 million domestically and $593.3 million internationally for a worldwide total of $954.1 million. The entire “Despicable Me” series became the first animated franchise to cross $5 billion at the global box office. All four movies will be available to stream on Peacock by Oct. 31. \nThe cast includes Steve Carell as the lovable supervillain Gru, Kristen Wiig as Gru's wife Lucy Wilde, Pierre Coffin as the voice of Gru's hyperactive minions, Joey King, Miranda Cosgrove, Stephen Colbert, Sofía Vergara, Dana Gaier, Will Ferrell and more.",
                 "_id": "8d11783e-4f5e-4d50-a6e0-ab63b8b84556"
             },
             {
-                "heading": "Box Office: 'Transformers One' Makes $3.4 Million in Previews",
-                "content": "There's more than meets the eye at the box office this weekend. Paramount and Hasbro Entertainment's “Transformers One,” the franchise's first fully animated film since 1986, has made $3.36 million in Thursday previews at the box office. The family-friendly film, directed by Josh Cooley (“Toy Story 4”), is expected to make between $30 million and $40 million in its opening weekend, enough to take down Warner Bros.' “Beetlejuice Beetlejuice” and claim the box office crown. Tim Burton's “Beetlejuice” sequel, another follow-up to a beloved '80s film, has been the top movie for the past two weeks and is on track to add $25 million in its third weekend.",
+                "heading": "Does Joker 2 Have A Post-Credits Scene? A Spoiler-Free Guide",
+                "content": "One of the biggest movies of the fall is upon us. Director Todd Phillips has reunited with star Joaquin Phoenix for another dark tale in the DC Universe in the form of 'Joker: Folie à Deux,' aka 'Joker 2.' This serves as a follow-up to 2019's 'Joker,' which became a massive $1 billion success for Warner Bros. and DC. Whether or not the sequel matches the insanely high heights of the original remains to be seen. Another big question: does Phillips set up more to come with Arthur Fleck? Is there a post-credits scene that fans need to be aware of? \nThe first 'Joker' did not do the typical comic book movie thing as there was no credits scene attached. Phillips said what he wanted to say before the credits began rolling. Then again, at that time, nobody knew just how big of a success this take on the famed Batman villain was going to be. Did that change WB's thinking this time around? We're here to offer up a spoiler-free guide so that viewers can be prepared when they head out to see the film. Seriously, no spoilers here whatsoever, so read on without fear. Let's get into it.",
                 "_id": "40f60ea3-d678-41bb-9cbd-9bd0c808c98d"
             },
             {
-                "heading": "2024 National Book Critics Circle Awards Finalists Announced",
-                "content": "The National Book Critics Circle has announced 30 finalists in six categories—autobiography, biography, criticism, fiction, general nonfiction, and poetry—for the 2024 National Book Critics Circle Awards, which recognizes books from the publishing year 2023.",
+                "heading": "One Classic Movie Has Quietly Influenced George R.R. Martin - And Game Of Thrones",
+                "content": "No one will confuse 'A Song Of Ice and Fire' with an old-fashioned fairy tale. George R. R. Martin, author of the still-incomplete epic, is not shy about admitting his influences, though, and classic fantasy is one of his greatest. \nIn 'A Dance With Dragons,' Quentyn Martell's doomed quest to marry Queen Daenerys Targaryen is compared with the tale of the Frog Prince (apparently a bedtime story in both Westeros and our world). This time, a princess' kiss does not make the frog into a romantic hero — Quentyn is kissed only by dragonfire. 'The Frog Prince' was first told by the Brothers Grimm in the 1800s, but one can easily draw parallels to an earlier, even more famous French fable: 'Beauty and the Beast.' \nIn the 2012 'A Song of Ice and Fire' calendar, artist John Picacio drew 12 drawings of the series' most famous characters. For October, he picked Sansa Stark and Sandor Clegane/The Hound, explicitly labeling the image 'Beauty and the Beast.",
                 "_id": "7499c56f-ea51-4567-981f-bca50b384f4d"
+            },
+            {
+                "heading": "The Simpsons' Fake Series Finale Was Inspired By A Common Fan Question",
+                "content": "The season 36 premiere of 'The Simpsons' feels a lot like an April Fool's episode, in that its entire premise is a meta joke about the show's longevity. 'Bart's Birthday' is framed as a ceremony hosted by 'Simpsons' alum Conan O'Brien, which starts off with him explaining how Fox has been trying to cancel 'The Simpsons' since day one. He shows us a few potential series finales that supposedly almost happened: one where Homer really does die when falling down the Springfield Gorge, one where a skiing Homer gets brutally split in half when he crashes into a tree, and one where he accidentally blows up the entire town. \nThe main segment revolves around Conan tasking an AI machine to write the perfect series finale for modern 'Simpsons,' with terrible results. Almost every character is given a rushed happy ending, most of them with strong spinoff potential, while a confused Bart tries to figure out what's going on. His life has been almost exactly the same for thirty-six years straight, so it's jarring for everything to permanently change so quickly. Things escalate with Bart finding out that it's his 11th birthday, even though he's supposed to stay 10 forever.",
+                "_id": "894f5b77-9c9e-4de7-9532-3084d0f1b8b7"
             }
         ]
 
