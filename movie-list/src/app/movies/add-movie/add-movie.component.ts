@@ -38,7 +38,7 @@ export class AddMovieComponent {
     } = this.form.value;
 
     this.movieService
-    .createMovie(cover!, title!, genre!, +year!, cast!, director!, +duration!, summary!)
+    .createMovie(cover!, title!, genre!, year!, cast!, director!, duration!, summary!)
     .subscribe(()=>{
       this.router.navigate(['/movies'])
     })
