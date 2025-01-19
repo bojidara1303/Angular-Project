@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
@@ -14,6 +14,7 @@ export class UserService implements OnDestroy {
   private user$ = this.user$$.asObservable();
 
   user: UserForAuthenticaion | undefined;
+  USER_KEY = '[user]';
 
   userSubscription: Subscription;
 
