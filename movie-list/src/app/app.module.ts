@@ -31,6 +31,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { NewsRoutingModule } from './news/news.routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailDirective } from './shared/validators/email.directive';
+import { appInterceptorProvider } from './app.interceptor';
 
 
 @NgModule({
@@ -70,7 +71,7 @@ import { EmailDirective } from './shared/validators/email.directive';
     ReactiveFormsModule, 
     HttpClientModule
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
