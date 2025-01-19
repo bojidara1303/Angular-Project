@@ -9,10 +9,12 @@
             <p class="movie-year"><span>Year:</span> {{movie.year}}</p>
             <p class="movie-duration"><span>Duration:</span> {{movie.duration}} mins</p>
             <p class="movie-summary"><span>Summary:</span> {{movie.summary}}</p>
+
             <div class="btn-container">
-                <button class="btn"><a routerLink="/movies/:movieId/edit" class="edit-movie">Edit movie</a></button>
+                <button class="btn"><a routerLink="/movies/{{movie._id}}/edit" class="edit-movie">Edit movie</a></button>
                 <button class="del-movie btn">Delete movie</button>
             </div>
+            
         </div>
     </div>
 </section>
