@@ -1,14 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.development';
-import { Movie } from '../types/movie';
+import { Movie, MovieToEdit } from '../types/movie';
+import { BehaviorSubject, Subscription, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
+export class MovieService implements OnDestroy {
+  private movie$$ = new BehaviorSubject<MovieToEdit | undefined>(undefined)
+  private movie$ = this.movie$$.asObservable();
 
-  constructor(private http: HttpClient) { }
+  movie: MovieToEdit | undefined;
+  // MOVIE_KEY = '[movie]';
+
+  movieSubscription: Subscription;
+
+  constructor(private http: HttpClient) {
+    this.movieSubscription = this.movie$.subscribe((movie) => {
+      this.movie = movie;
+    })
+  }
 
   getAllMovies() {
     const { moviesUrl } = environment;
@@ -24,22 +36,16 @@ export class MovieService {
     cover: string,
     title: string,
     genre: string,
-    year: number,
+    year: string,
     cast: string,
     director: string,
-    duration: number,
-    summary: string
+    duration: string,
+    summary: string,
   ) {
+
     return this.http
       .post<Movie>(environment.moviesUrl, {
-        cover,
-        title,
-        genre,
-        year,
-        cast,
-        director,
-        duration,
-        summary
+        cover, title, genre, year, cast, director, duration, summary
       })
   }
 
@@ -52,15 +58,18 @@ export class MovieService {
     director: string,
     duration: number,
     summary: string,
-    movieId: string
+    _id?: string
   ) {
     return this.http
-      .put<Movie>(`${environment.moviesUrl}/${movieId}`, {
-        cover, title, genre, year, cast, director, duration, summary
-      })
+      .put<MovieToEdit>(`${environment.moviesUrl}/${_id}`, { cover, title, genre, year, cast, director, duration, summary })
+      .pipe(tap((movie) => this.movie$$.next(movie)))
   }
 
-  deleteMovie(movieId: string) {
-    return this.http.delete<Movie>(`${environment.moviesUrl}/${movieId}`)
+  deleteMovie(_id: string) {
+    return this.http.delete<Movie>(`${environment.moviesUrl}/${_id}`)
+  }
+
+  ngOnDestroy(): void {
+    this.movieSubscription.unsubscribe();
   }
 }

@@ -12,3 +12,16 @@ export interface Movie {
     summary:  string,
     _id: string
 }
+
+export interface MovieToEdit {
+   
+    cover: string,
+    title: string,
+    genre: string,
+    year: number,
+    cast: string,
+    director: string,
+    duration: number,
+    summary:  string,
+    _id: string
+}
