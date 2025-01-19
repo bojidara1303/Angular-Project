@@ -1,3 +1,13 @@
+.site-logo {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.site-logo img {
+    width: 350px;
+}
+
 .site-nav {
     display: flex;
     align-items: baseline;

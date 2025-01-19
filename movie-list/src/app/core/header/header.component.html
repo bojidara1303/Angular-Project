@@ -1,8 +1,11 @@
 <header>
     <!-- <a href="/"><img src="/" alt="" /></a> -->
+    <div class="site-logo">
+        <a routerLink=""><img src="../../../assets/Logo-03.png" class="movie-list" alt="logo"></a>
+    </div>
     <nav class="site-nav">
         <ul>
-            <li><a routerLink="/" class="nav-link">Home</a></li>
+            <li><a routerLink="" class="nav-link">Home</a></li>
             <li><a routerLink="movies" class="nav-link">Movies</a></li>
             <li><a routerLink="quotes" class="nav-link">Quotes</a></li>
             <li><a routerLink="news" class="nav-link">News</a></li>
@@ -14,8 +17,7 @@
         <ul>
 
             <div *ngIf="isLoggedIn" class="isAuthenticated">
-                <li (click)="logout()"><a routerLink="logout" class="nav-link"><span>Hello, {{username}} </span>|
-                        Logout</a></li>
+                <li (click)="logout()"><a routerLink="" class="nav-link"><span>Hello, {{username}} </span>| Logout</a></li>
             </div>
 
             <div *ngIf="!isLoggedIn" class="isGuest">
