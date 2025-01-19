@@ -1,6 +1,7 @@
 <section class="edit-movie-container">
     <div class="edit-movie">
-        <form #editMovieForm="ngForm" class="edit" (ngSubmit)="formSubmitHandler(editMovieForm)">
+
+            <form [formGroup]="form" class="edit" (ngSubmit)="saveMovieHandler()">
             <h1>Edit movie</h1>
 
             <label for="cover">Image:</label>
@@ -8,27 +9,25 @@
                 type="url" 
                 id="cover" 
                 name="cover" 
-                ngModel 
-                #inputCover="ngModel" 
-                required
-            />
+                [value]="editMovie.cover"
+                formControlName="cover"
+                />
 
-            <ng-container *ngIf="inputCover.touched">
-                <p class="cover-error" *ngIf="inputCover.errors?.['required']">Image is required!</p>
+            <ng-container *ngIf="form.get('cover')?.touched">
+                <p class="cover-error" *ngIf="form.get('cover')?.errors?.['required']">Image is required!</p>
             </ng-container>
 
             <label for="title">Title:</label>
             <input 
                 type="text" 
                 id="title" 
-                name="title" 
-                ngModel 
-                #inputTitle="ngModel" 
-                required
-            />
+                name="title"
+                [value]="editMovie.title"
+                formControlName="title" 
+                />
 
-            <ng-container *ngIf="inputTitle.touched">
-                <p class="title-error" *ngIf="inputTitle.errors?.['required']">Title is required!</p>
+            <ng-container *ngIf="form.get('title')?.touched">
+                <p class="title-error" *ngIf="form.get('title')?.errors?.['required']">Title is required!</p>
             </ng-container>
 
             <label for="genre">Genre:</label>
@@ -36,13 +35,12 @@
                 type="text" 
                 name="genre" 
                 id="genre" 
-                ngModel 
-                #inputGenre="ngModel" 
-                required
-            />
+                [value]="editMovie.genre"
+                formControlName="genre"
+                />
 
-            <ng-container *ngIf="inputGenre.touched">
-                <p class="genre-error" *ngIf="inputGenre.errors?.['required']">Genre is required!</p>
+            <ng-container *ngIf="form.get('genre')?.touched">
+                <p class="genre-error" *ngIf="form.get('genre')?.errors?.['required']">Genre is required!</p>
             </ng-container>
 
             <label for="year">Year:</label>
@@ -50,15 +48,12 @@
                 type="number" 
                 name="year" 
                 id="year" 
-                ngModel 
-                #inputYear="ngModel" 
-                required
-                min="1900"
-                max="2025"
-            />
+                [value]="editMovie.year"
+                formControlName="year"
+                />
 
-            <ng-container *ngIf="inputYear.touched">
-                <p class="year-error" *ngIf="inputYear.errors?.['required']">Year is required!</p>
+            <ng-container *ngIf="form.get('year')?.touched">
+                <p class="year-error" *ngIf="form.get('year')?.errors?.['required']">Year is required!</p>
             </ng-container>
 
             <label for="cast">Cast:</label>
@@ -66,59 +61,57 @@
                 type="text" 
                 name="cast" 
                 id="cast" 
-                ngModel 
-                #inputCast="ngModel" 
-                required
-            />
+                [value]="editMovie.cast"
+                formControlName="cast"
+                />
 
-            <ng-container *ngIf="inputCast.touched">
-                <p class="cast-error" *ngIf="inputCast.errors?.['required']">Cast is required!</p>
+            <ng-container *ngIf="form.get('cast')?.touched">
+                <p class="cast-error" *ngIf="form.get('cast')?.errors?.['required']">Cast is required!</p>
             </ng-container>
 
             <label for="director">Director:</label>
             <input 
                 type="text" 
                 name="director" 
-                id="director" 
-                ngModel 
-                #inputDirector="ngModel" 
-                required
-            />
+                id="director"
+                [value]="editMovie.director"
+                formControlName="director" 
+                />
 
-            <ng-container *ngIf="inputDirector.touched">
-                <p class="director-error" *ngIf="inputDirector.errors?.['required']">Director is required!</p>
+            <ng-container *ngIf="form.get('director')?.touched">
+                <p class="director-error" *ngIf="form.get('director')?.errors?.['required']">Director is required!</p>
             </ng-container>
-            
+
             <label for="duration">Duration:</label>
             <input 
                 type="number" 
                 name="duration" 
                 id="duration" 
-                ngModel 
-                #inputDuration="ngModel" 
-                required
-                min="0"
-            />
+                [value]="editMovie.duration"
+                formControlName="duration"
+                />
 
-            <ng-container *ngIf="inputDuration.touched">
-                <p class="duration-error" *ngIf="inputDuration.errors?.['required']">Duration is required!</p>
+            <ng-container *ngIf="form.get('duration')?.touched">
+                <p class="duration-error" *ngIf="form.get('duration')?.errors?.['required']">Duration is required!</p>
+                <p class="duration-error" *ngIf="form.get('duration')?.errors?.['min']">Duration must be a positive number!</p>
             </ng-container>
 
             <label for="summary">Summary:</label>
             <textarea 
+                type="text"
                 name="summary" 
-                id="summary" 
-                ngModel 
-                #textareaSummary="ngModel" 
-                required
+                id="summary"
+                [value]="editMovie.summary"
+                formControlName="summary"
                 >
             </textarea>
 
-            <ng-container *ngIf="textareaSummary.touched">
-                <p class="summary-error" *ngIf="textareaSummary.errors?.['required']">Summary is required!</p>
+            <ng-container *ngIf="form.get('summary')?.touched">
+                <p class="summary-error" *ngIf="form.get('summary')?.errors?.['required']">Summary is required!</p>
             </ng-container>
 
-            <button class="edit-movie-btn" type="submit">Edit movie</button>
+            <button class="save-movie-btn" type="submit">Save movie</button>
         </form>
+   
     </div>
 </section>
