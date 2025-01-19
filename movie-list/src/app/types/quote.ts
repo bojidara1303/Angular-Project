@@ -7,3 +7,9 @@ export interface Quote {
     quote: string,
     movie: string
 }
+
+export interface QuoteToEdit {
+    imageUrl: string,
+    quote: string,
+    movie: string
+}

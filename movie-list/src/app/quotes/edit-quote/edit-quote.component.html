@@ -1,6 +1,6 @@
 <section class="edit-quote-container">
     <div class="edit-quote">
-        <form [formGroup]="form"  class="edit" (ngSubmit)="editQuote()">
+        <form [formGroup]="form"  class="edit" (ngSubmit)="editQuote">
 
             <h1>Edit Quote</h1>
 
@@ -29,17 +29,17 @@
                 <p class="quote-error" *ngIf="form.get('quote')?.errors?.['required']">Quote is required!</p>
             </ng-container>
 
-            <label for="author">Name:</label>
+            <label for="movie">Movie:</label>
             <input 
                 type="text" 
-                name="author" 
-                id="author" 
-                placeholder="Enter name here" 
-                formControlName="author"
+                name="movie" 
+                id="movie" 
+                placeholder="Enter name of the movie here" 
+                formControlName="movie"
            />
 
-            <ng-container *ngIf="form.get('author')?.touched">
-                <p class="author-error" *ngIf="form.get('author')?.errors?.['required']">Name is required!</p>
+            <ng-container *ngIf="form.get('movie')?.touched">
+                <p class="movie-error" *ngIf="form.get('movie')?.errors?.['required']">Movie name is required!</p>
             </ng-container>
 
             <button class="edit-quote-btn">Edit quote</button>

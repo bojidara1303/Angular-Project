@@ -8,7 +8,7 @@ import { EditQuoteComponent } from './edit-quote/edit-quote.component';
 const routes: Routes = [
     { path: 'quotes/add-quote', component: AddQuoteComponent },
     { path: 'quotes', component: AllQuotesComponent },
-    { path: 'quotes/quoteId/edit', component: EditQuoteComponent },
+    { path: 'quotes/:quoteId/edit', component: EditQuoteComponent },
 ];
 
 @NgModule({

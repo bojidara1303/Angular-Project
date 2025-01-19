@@ -82,7 +82,7 @@
 
 .image-error,
 .quote-error,
-.author-error {
+.movie-error {
     color: red;
     font-size: 13px;
     padding: 0;

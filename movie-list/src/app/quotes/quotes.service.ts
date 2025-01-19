@@ -1,14 +1,25 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { Quote } from '../types/quote';
+import { BehaviorSubject, Subscription, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class QuotesService {
+export class QuotesService implements OnDestroy{
+  private quote$$ = new BehaviorSubject<Quote | undefined>(undefined);
+  private quote$ = this.quote$$.asObservable();
 
-  constructor(private http: HttpClient) { }
+  quote: Quote | undefined;
+
+  quoteSunscription: Subscription;
+
+  constructor(private http: HttpClient) {
+    this.quoteSunscription = this.quote$.subscribe((quote) => {
+      this.quote = quote;
+    })
+  }
 
   getAllQuotes() {
     const { quotesUrl } = environment;
@@ -37,10 +48,15 @@ export class QuotesService {
     return this.http.put<Quote>(`${environment.quotesUrl}/${quoteId}`, {
       imageUrl, quote, movie
     })
+      .pipe(tap((quote) => this.quote$$.next(quote)))
   }
 
-  deleteQuote(quoteId:string){
+  deleteQuote(quoteId: string) {
     return this.http.delete<Quote>(`${environment.quotesUrl}/${quoteId}`)
+  }
+
+  ngOnDestroy(): void {
+    this.quoteSunscription.unsubscribe();
   }
 }
 
