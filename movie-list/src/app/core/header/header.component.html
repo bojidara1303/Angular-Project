@@ -17,7 +17,7 @@
         <ul>
 
             <div *ngIf="isLoggedIn" class="isAuthenticated">
-                <li (click)="logout()"><a routerLink="" class="nav-link"><span>Hello, {{username}} </span>| Logout</a></li>
+                <li (click)="logout()"><a routerLink="/logout" class="nav-link"><span>Hello, {{username}} </span>| Logout</a></li>
             </div>
 
             <div *ngIf="!isLoggedIn" class="isGuest">
